@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>We'll See Weather It Works</title>
+    <script src="./js/main.js" defer></script>
+    <link rel="stylesheet" href="./static/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-left">
+        <img class="weathericonlarge" id="weathericonlarge">
+        <div class="header-current-temp">
+          <span id="currenttemp"></span>
+        </div>
+      </div>
+      
+      <div class="head-right">
+        
+          <center>
+            <section class="form-container"></section>
+            <form action="" id="form" name="form" class="input-group">
+              <select id="filter" name="filter" class="form-select" aria-label="Filter">
+                  <option value="city" selected>City</option>
+                  <option value="zip">Zip</option>
+              </select>
+              <input type="text" id="input" name="input" class="form-control" placeholder="Find Weather">
+              <select id="unit" class="form-select" aria-label="Temperature unit">
+                  <option value="imperial" selected>F°</option>
+                  <option value="metric">C°</option>
+                  <option value="standard">K°</option>
+              </select>
+              <input type="submit" id="btnSearch" class="formbtn" value="Get Weather">
+          </form>
+          </section>
+          </center>
+      </div>
+    </header>
+    <center><font style="color:yellow">
+    <div class="validationContainer">
+      <p id="validText"></p>
+    </div>
+    </font>
+    </center>
+  </div>
+    <center><h2 id="cityname" class="cityname"></h2>
+            <h3 class="forecast" id="forecast"></h3>
+    
+    </center>
+    <center>3-Day Forecast</center>
+    <section class="day-section" data-day-section>
+      
+      <div class="day-card">
+        <img class="weathericon" id="weathericon1">
+        <div class="day-card-day"><span id="forecasttemp1" class="forecasttemp"></span></div>
+      </div>
+      <div class="day-card">
+        <img class="weathericon" id="weathericon2">
+        <div class="day-card-day"><span id="forecasttemp2" class="forecasttemp"></span></div>
+        
+      </div>
+      <div class="day-card">
+        <img class="weathericon" id="weathericon3">
+        <div class="day-card-day"><span id="forecasttemp3" class="forecasttemp"></span></div>
+        
+      </div>
+      
+    </section>
+    <template id="day-card-template">
+      <div class="day-card">
+        <img data-icon class="weather-icon" />
+        <div class="day-card-day" data-date></div>
+        <div><span data-temp></span><span>&deg;</span></div>
+      </div>
+    </template>
+    
+    <center>
+    <h3>Conditions Now:</h3>
+    <h1 id="temp" class="temp"></h1>
+    <p class=""><strong><em>Feels Like <span id="feelslike"></span></p></em></strong>
+    
+    <p class="">
+        Expected High: <span id="high"></span>
+        <span> </span><br><br>
+        Expected Low: <span id="low"></span>
+    </p>
+    <p class="">Humidity: 
+        <span id="humidity"></span>
+    </p>
+    </center>
+</div>
+</main>
+  </body>
+</html>
